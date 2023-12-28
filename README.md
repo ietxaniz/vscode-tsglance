@@ -7,6 +7,8 @@
 
 TSGLANCE is a Visual Studio Code extension designed for TypeScript developers. It provides a comprehensive and intuitive view of TypeScript entities, enhancing code navigation and understanding within projects.
 
+![TSGLANCE Screenshot](./media/screenshot.png)
+
 ## Key Features
 - **TypeScript Explorer**: A dedicated panel in VSCode for an organized view of TypeScript classes, interfaces, enums, types, getters, and setters.
 - **Class Analysis**: Detailed view of classes including fields, methods, getters, and setters. Displays inheritance information with support for recursive class inheritance.
@@ -21,6 +23,7 @@ Install directly from the Visual Studio Code Marketplace. Search for "TSGLANCE" 
 ## Usage
 - Open a TypeScript project in Visual Studio Code.
 - Access the TSGLANCE pane from the Activity Bar to view the tree of TypeScript entities.
+- Click on "Load data" menu item on the opened view to load TypeScript entities from your src folder.
 - Click on any entity for quick navigation and detailed insights.
 
 ## License
