@@ -1,0 +1,81 @@
+{
+  "name": "tsglance",
+  "displayName": "TSGlance",
+  "description": "A TypeScript class and interface overview tool for quick navigation and analysis.",
+  "version": "0.0.1",
+  "publisher": "ietxaniz",
+  "icon": "media/tsglance.png",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "typescript",
+    "overview",
+    "navigation",
+    "tree view"
+  ],
+  "activationEvents": [
+    "onLanguage:typescript"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "tsglance.refresh",
+        "title": "Refresh"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "tsglance.refresh",
+          "when": "view == tsglance-view"
+        }
+      ]
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "tsglance",
+          "title": "TS Glance",
+          "icon": "media/tsglance-vsc.svg"
+        }
+      ]
+    },
+    "views": {
+      "tsglance": [
+        {
+          "id": "tsglance-view",
+          "name": "TypeScript Entities"
+        }
+      ]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ietxaniz/vscode-tsglance"
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test",
+    "tsc-check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3",
+    "@vscode/test-cli": "^0.0.4",
+    "@vscode/test-electron": "^2.3.8"
+  }
+}
