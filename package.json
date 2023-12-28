@@ -2,7 +2,7 @@
   "name": "tsglance",
   "displayName": "TSGlance",
   "description": "A TypeScript class and interface overview tool for quick navigation and analysis.",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "publisher": "ietxaniz",
   "icon": "media/tsglance.png",
   "engines": {
@@ -17,21 +17,19 @@
     "navigation",
     "tree view"
   ],
-  "activationEvents": [
-    "onLanguage:typescript"
-  ],
+  "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "tsglance.refresh",
-        "title": "Refresh"
+        "command": "tsglance.loadData",
+        "title": "Load data"
       }
     ],
     "menus": {
       "view/title": [
         {
-          "command": "tsglance.refresh",
+          "command": "tsglance.loadData",
           "when": "view == tsglance-view"
         }
       ]
@@ -67,6 +65,9 @@
     "test": "vscode-test",
     "tsc-check": "tsc --noEmit"
   },
+  "dependencies": {
+    "typescript": "^5.3.3"
+  },
   "devDependencies": {
     "@types/vscode": "^1.85.0",
     "@types/mocha": "^10.0.6",
@@ -74,7 +75,6 @@
     "@typescript-eslint/eslint-plugin": "^6.15.0",
     "@typescript-eslint/parser": "^6.15.0",
     "eslint": "^8.56.0",
-    "typescript": "^5.3.3",
     "@vscode/test-cli": "^0.0.4",
     "@vscode/test-electron": "^2.3.8"
   }
