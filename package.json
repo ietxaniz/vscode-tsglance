@@ -2,7 +2,7 @@
   "name": "tsglance",
   "displayName": "TSGlance",
   "description": "A TypeScript class and interface overview tool for quick navigation and analysis.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "publisher": "ietxaniz",
   "icon": "media/tsglance.png",
   "engines": {
@@ -15,7 +15,8 @@
     "typescript",
     "overview",
     "navigation",
-    "tree view"
+    "class view",
+    "explorer"
   ],
   "activationEvents": [],
   "main": "./out/extension.js",
